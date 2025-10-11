@@ -75,6 +75,15 @@ MONGO_URL=mongodb://localhost:27017/
 DB_NAME=peopleflow_db
 ```
 
+Y el archivo .flaskenv:
+
+```bash
+FLASK_APP=app/app.py
+FLASK_ENV=development
+FLASK_RUN_PORT=5000
+FLASK_RUN_HOST=0.0.0.0
+```
+
 4. Ejecutar la Aplicación:
    
 Con el entorno virtual activo, usa el comando de Flask:
