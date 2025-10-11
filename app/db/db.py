@@ -7,7 +7,7 @@ class MongoDB:
         self.db = None
     
     def connect(self):
-        mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
+        mongo_uri = os.getenv("MONGO_URL", "mongodb://localhost:27017/")
         db_name = os.getenv("DB_NAME", "peopleflow_db")
         
         self.client = MongoClient(mongo_uri)
