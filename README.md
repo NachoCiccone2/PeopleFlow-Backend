@@ -69,6 +69,7 @@ pip install -r requirements.txt
 
 3. Configurar Entorno:
 
+Asegúrate de que el archivo .env exista en la raíz con la configuración de tu base de datos local.
 ```bash
 MONGO_URL=mongodb://localhost:27017/
 DB_NAME=peopleflow_db
