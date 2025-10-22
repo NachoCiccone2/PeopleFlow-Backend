@@ -107,7 +107,7 @@ _Todos los endpoints inician con el prefijo `/empleados` ._
 | Reporte       | `GET`         | `/empleados/salarios/promedio`  | Devuelve el promedio de salarios de todos los empleados activos en la base de datos.  |
 
 ## ✨ Próximos Pasos (Bonus Implementados)
-Esta sección se actualizará a medida que se implementen las funcionalidades opcionales del desafío.
+Esta sección se actualizará a medida que se implementen las funcionalidades bonus del desafío.
 
 ✅ Uso de Docker para levantar el entorno.
 
