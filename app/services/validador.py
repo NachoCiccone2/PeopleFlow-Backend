@@ -6,7 +6,7 @@ class Validador:
     def validar_nuevo_empleado(data):
         campos_obligatorios = ['nombre', 'apellido', 'email', 'puesto', 'salario', 'fecha_ingreso']
         for campo in campos_obligatorios:
-            if campo not in data or data[campo] is None:
+            if (campo not in data) or (data[campo] is None):
                 raise ValueError(f"El campo '{campo}' es obligatorio.")
             
         if( not Validador.validar_email(data['email']) ):
@@ -32,7 +32,7 @@ class Validador:
         datos_a_actualizar = {}
 
         for key, value in data.items():
-            if key in campos_permitidos and value is not None:
+            if (key in campos_permitidos) and (value is not None):
                 if key == 'email':
                     if not Validador.validar_email(value):
                         return {}, f"Email '{value}' con formato inválido."
@@ -67,7 +67,3 @@ class Validador:
         patron_email = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
         return re.match(patron_email, email) is not None
     
-    @staticmethod
-    def validar_fecha(fecha: str) -> bool:
-        patron_fecha = r"^\d{4}-\d{2}-\d{2}$"
-        return re.match(patron_fecha, fecha) is not None
