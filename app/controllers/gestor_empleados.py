@@ -1,4 +1,4 @@
-from ..services.gestor_db_empleados import gestor_db_empleados
+from .gestor_db_empleados import gestor_db_empleados
 from ..services.formateador import Formateador
 from ..models.empleado_model import Empleado
 from ..exceptions.excepciones import EmpleadoDuplicadoError, EmpleadoNoEncontradoError
