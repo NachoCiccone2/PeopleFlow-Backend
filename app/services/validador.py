@@ -15,6 +15,9 @@ class Validador:
         if( not Validador.validar_fecha(data['fecha_ingreso']) ):
             raise ValueError("Fecha con formato invalido.")
         
+        if( not Validador.validar_salario(float(data['salario'])) ):
+            raise ValueError("Salario con formato invalido.")
+        
         nuevo_empleado = Empleado(
             nombre=data['nombre'],
             apellido=data['apellido'],
@@ -44,6 +47,8 @@ class Validador:
                     datos_a_actualizar[key] = value
 
                 elif key == 'salario':
+                    if not Validador.validar_salario(float(value)):
+                        return {}, f"Salario '{value}' con formato inválido."
                     datos_a_actualizar[key] = float(value)
                 else:
                     datos_a_actualizar[key] = value
@@ -71,3 +76,7 @@ class Validador:
     def validar_fecha(fecha: str) -> bool:
         patron_fecha = r"^\d{4}-\d{2}-\d{2}$"
         return re.match(patron_fecha, fecha) is not None
+    
+    @staticmethod
+    def validar_salario(salario: float) -> bool:
+        return salario >= 0
