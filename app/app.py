@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 from .db.db import db 
 from .routes.empleado_routes import empleado_bp
-from .services.gestor_db_empleados import gestor_db_empleados
+from .controllers.gestor_db_empleados import gestor_db_empleados
 
 load_dotenv()
 app = Flask(__name__)

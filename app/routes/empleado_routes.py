@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 
-from ..services.gestor_empleados import gestor_empleados
+from ..controllers.gestor_empleados import gestor_empleados
 from ..services.formateador import Formateador
 from ..services.validador import Validador
 from ..exceptions.excepciones import EmpleadoDuplicadoError, EmpleadoNoEncontradoError

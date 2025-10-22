@@ -12,5 +12,4 @@ class Empleado:
         return self.salario
     
     def __repr__(self):
-        # Representación útil para depuración
         return f"Empleado(id='{self.id}', nombre='{self.nombre}', email='{self.email}')"
