@@ -1,7 +1,7 @@
 # Backend PeopleFlow App
 API interna diseñada para centralizar y administrar la información de los empleados de la startup PeopleFlow.
 
-Esta aplicación ayudará al área de Recursos Humanos a prevenir los interminables problemas con la documentación, y les dará las herramientas necesarias para gestionar a los empleados de PeopleFlow de manera sencilla! También permitirá al CFO obtener su reporte del promedio de los salarios de manera eficiente.
+Esta aplicación ayudará al área de Recursos Humanos a prevenir los interminables problemas con la documentación, y les dará las herramientas necesarias para gestionar a los empleados de PeopleFlow de manera sencilla! También permitirá obtener un reporte del promedio de los salarios de manera eficiente.
 
 ## 🛠️ Stack Tecnológico
 * Backend:
@@ -106,8 +106,7 @@ _Todos los endpoints inician con el prefijo `/empleados` ._
 | Eliminar      | `DELETE`      | `/empleados/<id>`  | Elimina un empleado del registro.  |
 | Reporte       | `GET`         | `/empleados/salarios/promedio`  | Devuelve el promedio de salarios de todos los empleados activos en la base de datos.  |
 
-## ✨ Próximos Pasos (Bonus Implementados)
-Esta sección se actualizará a medida que se implementen las funcionalidades bonus del desafío.
+## ✨ Próximos Pasos 
 
 ✅ Uso de Docker para levantar el entorno.
 
